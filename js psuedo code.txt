@@ -1,0 +1,28 @@
+HOMEPAGE
+
+Random image carousel
+	- Hero images in an array
+	- Select and change background image URL from hero image array
+	- Change brief description for each image - tie to image URL
+
+
+WORK PAGE
+
+Image hovers - show project name on hover
+	- On mouseover slide up project description
+	- On mouseout slide down project description
+
+Filter/tags - allow user to filter projects by Work type, client, 
+	- Add classes to 'project panel' for each filter type
+	- On click of filter, hide all unrelated classes (and therefore hide 'project panels')
+	- Include 'clear filter' button, to show all classes again
+
+	The simplest way I can think of assigning filter classes to each 'project panel' is to literally stick it in the div (ie. <div class="project signage wayfinging informationdesign applied">) but this may become very cluncky. Not sure if it would be sensible to store all of this in an array or something that could be called when the filter is selected?
+
+Filter selector - Filter list should concertina out filter options when clicked
+	–  On click, show unordered list of fliter options (ie. clicking on "Client" list should reveal "Translink, DublinBus, GOV.UK, etc")
+
+
+
+
+I'll have a number of projects all following the same template, they will be identical bar the description and images. Would it be possible to create some kind of script that would populate the template with predefined information (eg Header, Description, Images) using something like element.HTML() and element.attr()?  
