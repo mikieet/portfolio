@@ -34,22 +34,6 @@ p {
 .col-2 {
   width: 16.66666667%; }
 
-@media (max-width: 768px) {
-  body {
-    margin: 0 1rem;
-    padding: 0 1rem; }
-
-  .col-4 {
-    width: 50%; }
-
-  .container {
-    margin: 1rem 0 1rem 0; } }
-@media (max-width: 420px) {
-  body {
-    margin: 0 1rem; }
-
-  .col-4 {
-    width: 100%; } }
 html {
   font-size: 19px;
   font-family: helvetica, sans-serif;
@@ -135,9 +119,26 @@ img {
   margin: 0;
   padding: 1rem;
   bottom: 0;
-  opacity: 0.7P; }
+  opacity: 0.7; }
 
 .checkered {
   background-color: darkgrey; }
+
+@media (max-width: 960px) {
+  body {
+    margin: 0 1rem;
+    padding: 0 1rem; }
+
+  .col-4 {
+    width: 50%; }
+
+  .container {
+    margin: 1rem 0 1rem 0; } }
+@media (max-width: 480px) {
+  body {
+    margin: 0 0.15rem; }
+
+  .col-4 {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
