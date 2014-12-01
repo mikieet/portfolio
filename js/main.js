@@ -20,6 +20,10 @@ $(".project").mouseout(function() {
 //     console.log(json); // this will show the info it in firebug console
 // });
 
+
+
+// console.log(projData.perf.tags[1])
+
 var performance = {
 	title: "performance",
 	company: "gds",
@@ -123,8 +127,10 @@ $("#filterContainer").on("click",function(e){
 } else {
 	$("#filterDropdown").slideDown();
 }
-	
 })
 
 
+$.getJSON("https://github.com/mikieet/portfolio/blob/master/js/filterData.json",function(data){
+	console.log(data);
 
+})

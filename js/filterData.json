@@ -1,38 +1,39 @@
-///filter json///
-// var projData = {
-// 	perf = {title: "performance",
-// 			company: "gds",
-// 			client:"govuk",
-// 			medium:"digital",
-// 			tags:["info","map"]}
-// 	}
-projects: {
-	"perf": [
-		{
-			"title": "performance",
-			"agency": "gds",
-			"client":"govuk",
-			"medium":"digital",
-			"tags":["info"]	
-		}
-	],
-	"sprint": [
-		{
-			"title": "sprint",
-			"agency": "gds",
-			"client":"gds",
-			"medium":"print",
-			"tags":["info","branding"]	
-		}
-	],	
-	"MVC": [
-		{
-			"title": "mvc",
-			"agency": "applied",
-			"client":"translink",
-			"medium":"print",
-			"tags":["info","mapping"]	
-		}
-	],	
-
+{
+    "projects": {
+        "perf": [
+            {
+                "title": "performance",
+                "agency": "gds",
+                "client": "govuk",
+                "medium": "digital",
+                "tags": [
+                    "info"
+                ]
+            }
+        ],
+        "sprint": [
+            {
+                "title": "sprint",
+                "agency": "gds",
+                "client": "gds",
+                "medium": "print",
+                "tags": [
+                    "info",
+                    "branding"
+                ]
+            }
+        ],
+        "MVC": [
+            {
+                "title": "mvc",
+                "agency": "applied",
+                "client": "translink",
+                "medium": "print",
+                "tags": [
+                    "info",
+                    "mapping"
+                ]
+            }
+        ]
+    }
 }
