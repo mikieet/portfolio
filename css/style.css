@@ -92,13 +92,28 @@ footer {
   margin-right: 1rem; }
 
 .workImg {
-  border-top: solid 1px #b7b4b4;
-  padding-top: 1rem;
   max-width: auto;
   max-height: auto;
   margin: 1rem 0.5rem 0 0.5rem;
   overflow: hidden;
   position: center center; }
+
+#filterDropdown {
+  margin: 1rem 0; }
+
+.filterList {
+  float: left;
+  width: 25%;
+  display: block; }
+  .filterList ul :hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #b7b4b4; }
+  .filterList li {
+    display: block;
+    margin-bottom: 0.25rem; }
+  .filterList h1 {
+    margin-bottom: 1rem; }
 
 img {
   width: 100%;

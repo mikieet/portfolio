@@ -111,3 +111,20 @@ setInterval(function() {
     index = (index + 1) % numImages;
 }, 6000);
 
+///////////////FILTER DROPDOWN//////////////////////
+
+$("#filterDropdown").hide();
+
+$("#filterContainer").on("click",function(e){
+	e.preventDefault();
+	if ($('#filterDropdown').is(':visible')) {
+	$("#filterDropdown").slideUp();
+	console.log("hello2")
+} else {
+	$("#filterDropdown").slideDown();
+}
+	
+})
+
+
+

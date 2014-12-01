@@ -22,12 +22,55 @@
       </header>
 
       <main>
-        <div class="filterContainer">
-          Some kind of drop down filter | 
-          <a id="info" class="filter" href="#">Information Design</a> | 
+        <div id="filterContainer">
+          <span id="filterSelect">Filter projects</span>
+          <!--           <a id="info" class="filter" href="#">Information Design</a> | 
           <a id="map" class="filter" href="#">Mapping</a> | 
           <a id="sign" class="filter" href="#">Signage</a> |
-          <a id="clear" href="#">Clear filter</a>
+          <a id="clear" href="#">Clear filter</a> -->
+        </div>
+        <div id="filterDropdown" class="col-12">
+ 
+          <div class="filterList agency">
+            <h4>Agency</h4>
+            <ul>
+              <li id="gdsAgency">Government Digital Service</li>
+              <li id="applied">Applied_</li>
+              <li id="personal">Personal</li>
+            </ul>
+          </div>
+ 
+          <div class="filterList client">
+            <h4>Client</h4>
+            <ul>
+              <li id="gdsClient">Government Digital Service</li>
+              <li id="govuk">GOV.UK</li>
+              <li id="trans">Vancouver Translink</li>
+              <li id="mx">Metrolinx</li>
+              <li id="lldc">LLDC</li>
+              <li id="heath">Heathrow Airport</li>
+              <li id="la">Local Authorities</li>
+            </ul>
+          </div>
+  
+          <div class="filterList specialism">
+            <h4>Specialism</h4>
+             <ul>
+              <li id="infodes">Information design</li>
+              <li id="sign">Signage</li>
+              <li id="maps">Mapping</li>
+              <li id="brand">Branding</li>
+            </ul>
+          </div> 
+
+          <div class="filterList medium">
+            <h4>Medium</h4>
+            <ul>
+              <li id="digi">Digital</li>
+              <li id="print">Print</li>
+            </ul>
+          </div>
+      
         </div>
 
         <div class="project col-4 performance">           
