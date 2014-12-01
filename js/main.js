@@ -57,7 +57,7 @@ $(".filter").on("click", function(){
 	projects.forEach(function (element, index) {
 	console.log(element.title)
 	if (filterChoice == "infoChoice") {
-		
+
 	} 
 	
 // { if {((element.company)=="gds") 
@@ -98,4 +98,16 @@ $("#sign").on("click",function (){
 $("#clear").on("click", function(){
 	$(".project").show();
 })
+
+///////////////IMAGE CAROUSEL//////////////////////
+
+var heroImages = ["images/perf_big_01.jpg","images/mvc_big_01.jpg","images/mill_big_01.jpg"]
+var numImages = heroImages.length;
+var index = 0;
+
+
+setInterval(function() {
+	$("#mainImg").attr("src",heroImages[index]);
+    index = (index + 1) % numImages;
+}, 6000);
 
