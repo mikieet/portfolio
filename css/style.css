@@ -74,6 +74,12 @@ footer {
   font-size: 0.75rem;
   font-color: #b7b4b4; }
 
+#projectName {
+  font-weight: 700; }
+
+#projectType {
+  font-weight: 300; }
+
 .heroImg, .heroImgProject {
   width: 100%;
   height: 80vh; }
