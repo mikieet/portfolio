@@ -1,16 +1,17 @@
+$(function () {
 //////////////// PROJECTS HOVER //////////////////////
 
-$(".prjDesc").hide()
+// $(".prjDesc").hide();
 
-$(".project").mouseover(function() {
-  console.log("yo")
-  // $(".prjDesc").slideUp()
-  $(this).children(".prjDesc").show();
-})
+// $(".project").mouseover(function() {
+//   console.log("yo");
+//   // $(".prjDesc").slideUp()
+//   $(this).children(".prjDesc").show();
+// });
 
-$(".project").mouseout(function() {
-    $(".prjDesc").hide()
-})
+// $(".project").mouseout(function() {
+//     $(".prjDesc").hide();
+// });
 
 ///////////////////////////////////////////////////////
 
@@ -55,33 +56,46 @@ var expo = {
 	tags:["info","singage"]
 };
 
-console.log(expo.company)
-
+console.log(expo.company);
+var projects = [performance,mvc,expo];
 //Array of project objects
 
-var projects = [performance,mvc,expo]
-console.log(projects)
+
 
 //Select filterChoice
 
-$("#infoDes").on("click",function (){
-	var filterChoice = "info" 
+$("#infoDes").click(function (){
+	var filterChoice = "info";
+	filterList(filterChoice);
 });
 
-$("#sign").on("click",function (){
-	var filterChoice = "signage" 
+$("#sign").click(function (){
+	var filterChoice = "signage"; 
+	filterList(filterChoice);
 });
 
-$("#maps").on("click",function (){
-	var filterChoice = "maps"
-	console.log(filterChoice)
-		includedInArray()
+$("#maps").click(function (){
+	var filterChoice = "maps";
+	filterList(filterChoice);
 
 });
 
-$("#brand").on("click",function (){
-	var filterChoice = "brand" 
-});
+function filterList (filterChoice) {
+	for (var x = 0; x < projects.length; x++) {
+		for (var y = 0; y < projects[x].tags.length; y++) {
+			if (projects[x].tags[y] !== filterChoice) {
+				console.log('.' + projects[x].tags[y]);
+				$('.' + projects[x].tags[y]).hide();
+			} else {
+				$('.' + projects[x].tags[y]).show();
+			}
+		}
+	}
+}
+
+// $("#brand").click(function (){
+// 	var filterChoice = "brand" ;
+// });
 
 //cycle through array to see if filterChoice matches object data
 
@@ -96,9 +110,9 @@ $("#brand").on("click",function (){
 
 
 //Show all projects
-$("#clear").on("click", function(){
-	$(".project").show();
-})
+// $("#clear").on("click", function(){
+// 	$(".project").show();
+// });
 
 //store selection of tag in a variable to apply!!!!!
 // var filterChoice = $(".filter")
@@ -134,23 +148,23 @@ $("#clear").on("click", function(){
 
 ///////////////FILTER DROPDOWN//////////////////////
 
-$("#filterDropdown").hide();
+// $("#filterDropdown").hide();
 
-$("#filterContainer").on("click",function(e){
-	e.preventDefault();
-	if ($('#filterDropdown').is(':visible')) {
-	$("#filterDropdown").slideUp();
-	console.log("hello2")
-} else {
-	$("#filterDropdown").slideDown();
-}
-})
+// $("#filterContainer").on("click",function(e){
+// 	e.preventDefault();
+// 	if ($('#filterDropdown').is(':visible')) {
+// 	$("#filterDropdown").slideUp();
+// 	console.log("hello2");
+// } else {
+// 	$("#filterDropdown").slideDown();
+// }
+// });
 
 ///////////////IMAGE CAROUSEL//////////////////////
 
-var heroImages = ["images/perf_big_01.jpg","images/mvc_big_01.jpg","images/mill_big_01.jpg"]
-var numImages = heroImages.length;
-var index = 1;
+// var heroImages = ["images/perf_big_01.jpg","images/mvc_big_01.jpg","images/mill_big_01.jpg"]
+// var numImages = heroImages.length;
+// var index = 1;
 
 
 // setInterval(function() {
@@ -186,33 +200,33 @@ var index = 1;
 
 // console.log(projData2.)
 
-var heroImages = [perfImg,mvcImg,millImg]
+// var heroImages = [perfImg,mvcImg,millImg];
 
-var perfImg = {
-	image:"images/perf_big_01.jpg",
-	projName:"Performance Platform",
-	link:"performance-platform.html"
-}
+// var perfImg = {
+// 	image:"images/perf_big_01.jpg",
+// 	projName:"Performance Platform",
+// 	link:"performance-platform.html"
+// };
 
-var mvcImg = {
-	image:"images/perf_big_01.jpg",
-	projName:"Metro Vancouver Connections Map",
-	link:"metro-vancouver-connections.html"
-}
+// var mvcImg = {
+// 	image:"images/perf_big_01.jpg",
+// 	projName:"Metro Vancouver Connections Map",
+// 	link:"metro-vancouver-connections.html"
+// };
 
-var millImg = {
-	image:"images/mill_big_01.jpg",
-	projName:"Vancouver Millennium Line",
-	link:"millennium-line.html"
-}
+// var millImg = {
+// 	image:"images/mill_big_01.jpg",
+// 	projName:"Vancouver Millennium Line",
+// 	link:"millennium-line.html"
+// };
 
-var numImages = heroImages.length;
-var index = 1;
+// var numImages = heroImages.length;
+// var index = 1;
 
 
-setInterval(function() {
-	var thisImg = heroImages[index]
-	// console.log(thisImg.image)
-	// $("#mainImg").attr("src",(thisImg + .image));
-    index = (index + 1) % numImages;
-}, 3000);
+// setInterval(function() {
+// 	var thisImg = (heroImages[index]);	
+// 	$("#mainImg").attr("src",(heroImages[index]));
+//    	index = (index + 1) % numImages;
+// }, 3000);
+});
