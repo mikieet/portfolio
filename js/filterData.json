@@ -1,39 +1,23 @@
-{
-    "projects": {
-        "perf": [
-            {
-                "title": "performance",
-                "agency": "gds",
-                "client": "govuk",
-                "medium": "digital",
-                "tags": [
-                    "info"
-                ]
-            }
-        ],
-        "sprint": [
-            {
-                "title": "sprint",
-                "agency": "gds",
-                "client": "gds",
-                "medium": "print",
-                "tags": [
-                    "info",
-                    "branding"
-                ]
-            }
-        ],
-        "MVC": [
-            {
-                "title": "mvc",
-                "agency": "applied",
-                "client": "translink",
-                "medium": "print",
-                "tags": [
-                    "info",
-                    "mapping"
-                ]
-            }
-        ]
-    }
-}
+
+"projects": [
+        {
+            "title": "performance",
+            "agency": "gds",
+            "client": "govuk",
+            "medium": "digital",
+            "tags": ["info"]
+        },
+        {
+            "title": "sprint",
+            "agency": "gds",
+            "client": "gds",
+            "medium": "print",
+            "tags": ["info","branding"]
+        },
+		{	"title": "mvc",
+            "agency": "applied",
+            "client": "translink",
+            "medium": "print",
+            "tags": ["info","mapping"]
+        }
+    ]

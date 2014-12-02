@@ -107,7 +107,7 @@ $("#clear").on("click", function(){
 
 var heroImages = ["images/perf_big_01.jpg","images/mvc_big_01.jpg","images/mill_big_01.jpg"]
 var numImages = heroImages.length;
-var index = 0;
+var index = 1;
 
 
 setInterval(function() {
@@ -130,7 +130,58 @@ $("#filterContainer").on("click",function(e){
 })
 
 
-$.getJSON("https://github.com/mikieet/portfolio/blob/master/js/filterData.json",function(data){
-	console.log(data);
+// var projData2 = [
+//         {
+//             "title": "performance",
+//             "agency": "gds",
+//             "client": "govuk",
+//             "medium": "digital",
+//             "tags": ["info"]
+//         },
+//         {
+//             "title": "sprint",
+//             "agency": "gds",
+//             "client": "gds",
+//             "medium": "print",
+//             "tags": ["info","branding"]
+//         },
+// 		{	"title": "mvc",
+//             "agency": "applied",
+//             "client": "translink",
+//             "medium": "print",
+//             "tags": ["info","mapping"]
+//         }
+//     ]
 
-})
+// console.log(projData2.)
+
+var heroImages = [perfImg,mvcImg,millImg]
+
+var perfImg = {
+	image:"images/perf_big_01.jpg",
+	projName:"Performance Platform",
+	link:"performance-platform.html"
+}
+
+var mvcImg = {
+	image:"images/perf_big_01.jpg",
+	projName:"Metro Vancouver Connections Map",
+	link:"metro-vancouver-connections.html"
+}
+
+var millImg = {
+	image:"images/mill_big_01.jpg",
+	projName:"Vancouver Millennium Line",
+	link:"millennium-line.html"
+}
+
+var numImages = heroImages.length;
+var index = 1;
+
+
+setInterval(function() {
+	var thisImg = heroImages[index]
+	console.log(thisImg.image)
+	// $("#mainImg").attr("src",(thisImg + .image));
+    index = (index + 1) % numImages;
+}, 3000);

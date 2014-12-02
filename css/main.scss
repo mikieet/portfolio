@@ -2,13 +2,14 @@
 @import "grids";
 @import "colours";
 @import "clearfix";
-
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:300,700,400);
 
 
 html {
 	font:{
 		size:19px;
-		family:helvetica, sans-serif;
+		// family:helvetica, sans-serif;
+		font-family: 'Roboto Slab', serif;
 	color:$text-color; 
 	}
 	a {
@@ -38,9 +39,9 @@ ul {
 
 header {
 	margin: 0;
-	padding:2rem 0;
+	// padding:2rem 0;
 	background-color: $background-color;
-	border-bottom: solid 1px $text-highlight;
+	// border-bottom: solid 1px $text-highlight;
 	padding: 1rem 0 1rem 0;
 	margin-bottom: 1rem;
 	font:{
@@ -73,14 +74,14 @@ footer {
 }
 
 .descrip {
-	border-top: solid 1px $text-highlight;
+	// border-top: solid 1px $text-highlight;
 	margin: 1rem 0 1rem 0;
 	padding: 1rem 0 1rem 0;
 }
 
 .metadata,
 .content {
-	border-top: solid 1px $text-highlight;
+	// border-top: solid 1px $text-highlight;
 	padding:1rem 0 0 0;
 	margin-right: 1rem;
 }
@@ -101,6 +102,14 @@ footer {
 	margin: 1rem 0.5rem 0 0.5rem;
 	overflow: hidden;
 	position: center center;
+}
+
+.filterSelect {
+	:hover {
+			cursor: pointer;
+			text-decoration: underline;
+			color: $text-highlight;
+	}
 }
 
 #filterDropdown {
