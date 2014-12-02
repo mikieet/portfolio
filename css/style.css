@@ -8,7 +8,12 @@ h6 {
   margin: 0px; }
 
 p {
-  margin: 0 0 0.75rem 0; }
+  margin: 0 0 0.75rem 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
+
+li {
+  font-weight: 300; }
 
 .row {
   margin-right: -15px;
@@ -37,7 +42,6 @@ p {
 
 html {
   font-size: 19px;
-  font-font-family: 'Roboto Slab', serif;
   font-color: #100906; }
   html a {
     color: #100906;
@@ -49,7 +53,8 @@ html {
 body {
   margin: 0 2rem;
   background-color: #fff;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  font-family: 'Roboto Slab', sans-serif; }
 
 ul {
   margin: 0;

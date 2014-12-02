@@ -1,3 +1,5 @@
+//////////////// PROJECTS HOVER //////////////////////
+
 $(".prjDesc").hide()
 
 $(".project").mouseover(function() {
@@ -10,6 +12,7 @@ $(".project").mouseout(function() {
     $(".prjDesc").hide()
 })
 
+///////////////////////////////////////////////////////
 
 // var performance = {
 // title: "Performance Platform"
@@ -24,12 +27,16 @@ $(".project").mouseout(function() {
 
 // console.log(projData.perf.tags[1])
 
+/////////////////////// PROJECTS FILTER ///////////////////////////
+
+//Store of project data as objects
+
 var performance = {
 	title: "performance",
 	company: "gds",
 	client:"govuk",
 	medium:"digital",
-	tags:["info","map"]
+	tags:["info","maps"]
 };
 
 var mvc = {
@@ -37,7 +44,7 @@ var mvc = {
 	company: "applied",
 	client:"translink",
 	medium:"print",
-	tags:["info","map"]
+	tags:["info","maps"]
 };
 
 var expo = {
@@ -50,19 +57,59 @@ var expo = {
 
 console.log(expo.company)
 
+//Array of project objects
+
 var projects = [performance,mvc,expo]
 console.log(projects)
 
+//Select filterChoice
+
+$("#infoDes").on("click",function (){
+	var filterChoice = "info" 
+});
+
+$("#sign").on("click",function (){
+	var filterChoice = "signage" 
+});
+
+$("#maps").on("click",function (){
+	var filterChoice = "maps"
+	console.log(filterChoice)
+		includedInArray()
+
+});
+
+$("#brand").on("click",function (){
+	var filterChoice = "brand" 
+});
+
+//cycle through array to see if filterChoice matches object data
+
+// function includedInArray() {
+// 	if (parse.(mvc.tags[1]) == "filterChoice") {
+// 		console.log("true")
+// 	} else {
+// 		console.log(mvc.tags[1])
+// 	}
+// }
+
+
+
+//Show all projects
+$("#clear").on("click", function(){
+	$(".project").show();
+})
+
 //store selection of tag in a variable to apply!!!!!
-var filterChoice = $(".filter")
-// click filter perform function(thatFilter) on generic function
+// var filterChoice = $(".filter")
+// // click filter perform function(thatFilter) on generic function
 
-$(".filter").on("click", function(){
-	projects.forEach(function (element, index) {
-	console.log(element.title)
-	if (filterChoice == "infoChoice") {
+// $(".filter").on("click", function(){
+// 	projects.forEach(function (element, index) {
+// 	console.log(element.title)
+// 	if (filterChoice == "infoChoice") {
 
-	} 
+// } 
 	
 // { if {((element.company)=="gds") 
 // 	console.log('true')
@@ -74,46 +121,16 @@ $(".filter").on("click", function(){
 	// 	// $(this".project").hide()
 	// }
 
-	})
-});
+// 	})
+// });
 		
 
 // depending on true/false show/hide relevant project
 
 
 // var tag = [info,map,sign]
-$("#info").on("click",function (){
-	var filterChoice = "infoChoice" 
-});
-
-$("#map").on("click",function (){
-	var filterChoice = "mapChoice" 
-});
-
-$("#sign").on("click",function (){
-	var filterChoice = "signChoice" 
-});
-
-$("#sign").on("click",function (){
-	var filterChoice = "" 
-});
-
-//Show all projects
-$("#clear").on("click", function(){
-	$(".project").show();
-})
-
-///////////////IMAGE CAROUSEL//////////////////////
-
-var heroImages = ["images/perf_big_01.jpg","images/mvc_big_01.jpg","images/mill_big_01.jpg"]
-var numImages = heroImages.length;
-var index = 1;
 
 
-setInterval(function() {
-	$("#mainImg").attr("src",heroImages[index]);
-    index = (index + 1) % numImages;
-}, 6000);
 
 ///////////////FILTER DROPDOWN//////////////////////
 
@@ -128,6 +145,20 @@ $("#filterContainer").on("click",function(e){
 	$("#filterDropdown").slideDown();
 }
 })
+
+///////////////IMAGE CAROUSEL//////////////////////
+
+var heroImages = ["images/perf_big_01.jpg","images/mvc_big_01.jpg","images/mill_big_01.jpg"]
+var numImages = heroImages.length;
+var index = 1;
+
+
+// setInterval(function() {
+// 	$("#mainImg").attr("src",heroImages[index]);
+//     index = (index + 1) % numImages;
+// }, 6000);
+
+
 
 
 // var projData2 = [
@@ -181,7 +212,7 @@ var index = 1;
 
 setInterval(function() {
 	var thisImg = heroImages[index]
-	console.log(thisImg.image)
+	// console.log(thisImg.image)
 	// $("#mainImg").attr("src",(thisImg + .image));
     index = (index + 1) % numImages;
 }, 3000);
