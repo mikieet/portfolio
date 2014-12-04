@@ -34,98 +34,98 @@ $(function () {
 
 	var performance = {
 		title: "performance",
-		agency: "gds",
-		client:"govuk",
-		medium:"digital",
+		agency: ["gdsAgency"],
+		client:["govuk"],
+		medium:["digital"],
 		tags:["info","info"]
 	};
 
 	var mvc = {
 		title: "mvc",
-		agency: "applied",
-		client:"translink",
-		medium:"print",
+		agency: ["applied"],
+		client:["translink"],
+		medium:["print"],
 		tags:["info","info","maps"]
 	};
 
 	var millennium = {
 		title: "millennium",
-		agency: "applied",
-		client:"translink",
-		medium:"print",
+		agency: ["applied"],
+		client:["translink"],
+		medium:["print"],
 		tags:["info","signage"]
 	};
 
 	var qeop = {
 		title: "qeop",
-		agency: "applied",
-		client:"lldc",
-		medium:"print",
+		agency: ["applied"],
+		client:["lldc"],
+		medium:["print"],
 		tags:["maps","signage"]
 	};
 
 	var genmaps = {
 		title: "genmaps",
-		agency: "applied",
-		client:"various",
-		medium:"print",
+		agency: ["applied"],
+		client:["various"],
+		medium:["print"],
 		tags:["info","maps"]
 	};
 	
 	var heathrow = {
 		title: "heathrow",
-		agency: "applied",
-		client:"heathrow",
-		medium:["print", "digital"],
+		agency: ["applied"],
+		client:["heathrow"],
+		medium:["print","digital"],
 		tags:["info","maps"]
 	};
 	
 	var mxBus = {
 		title: "mxBus",
-		agency: "applied",
-		client:"metrolinx",
-		medium:"print",
+		agency: ["applied"],
+		client:["metrolinx"],
+		medium:["print"],
 		tags:["info","maps"]
 	};
 	
 	var mxMap = {
 		title: "mxMap",
-		agency: "applied",
-		client:"metrolinx",
-		medium:"print",
+		agency: ["applied"],
+		client:["metrolinx"],
+		medium:["print"],
 		tags:["maps"]
 	};
 	
 	var sprint = {
 		title: "sprint",
-		agency: "gdsAgency",
-		client:"gds",
-		medium:"print",
+		agency: ["gdsAgency"],
+		client:["gds"],
+		medium:["print"],
 		tags:["branding"]
 	};
 	
 	var cov = {
 		title: "cov",
-		agency: "applied",
-		client:"CoV",
-		medium:"print",
-		tags:["maps","branding"]
+		agency: ["applied"],
+		client:["CoV"],
+		medium:["print"],
+		tags:["maps","signage"]
 	};
 
-		var cycle = {
+	var cycle = {
 		title: "cycle",
-		agency: "personal",
-		client:"personal",
-		medium:"print",
+		agency: ["personal"],
+		client:["personal"],
+		medium:["print"],
 		tags:["signage","maps"]
 	};
 	
 	var stP = {
 		title: "stP",
-		agency: "personal",
-		client:"personal",
-		medium:["print","digital"],
-		tags:["branding"]
+		agency: ["personal"],
+		client:["personal"],
+		medium:["print",],
+		tags:["info"]
 	};
 	
 	
@@ -136,73 +136,83 @@ $(function () {
 
 	//Select filterChoice
 	//AGENCY
+	// $("#gdsAgency").click(function (){
+	// 	var filterChoice = "gds";
+	// 	var filterType = "agency";
+	// 	filterList(filterChoice);
+		
+	// });
+
+
 	$("#gdsAgency").click(function (){
-		var filterChoice = "gds";
-		// var filterType = "agency";
-		filterList(filterChoice);
+		filterList('gdsAgency', 'agency');
 		
 	});
 	
 	$("#applied").click(function (){
-		var filterChoice = "gds";
-		// var filterType = "agency";
-		filterList(filterChoice);	
+		filterList('applied', 'agency');	
 	});
 
 	$("#personal").click(function (){
-		var filterChoice = "gds";
-		// var filterType = "agency";
-		filterList(filterChoice);
+		filterList('personal', 'agency');	
 		
 	});
 
 	//SPECIALISMS
 	$("#infoDes").click(function (){
-		var filterChoice = "info";
-		// var filterType = "tags";
-		filterList(filterChoice);
+		filterList('info', 'tags');	
 	});
 
 	$("#sign").click(function (){
-		var filterChoice = "signage"; 
-		// var filterType = "tags";
-		filterList(filterChoice);
+		filterList('signage', 'tags');	
+
 	});
 
 	$("#maps").click(function (){
-		var filterChoice = "maps";
-		// var filterType = "tags";
-		filterList(filterChoice);
+		filterList('maps', 'tags');	
+
 
 	});
 
 	$("#brand").click(function (){
-		var filterChoice = "branding";
-		// var filterType = "tags";
-		filterList(filterChoice);
+		filterList('branding', 'tags');	
+
 
 	});
 
 	//MEDIUM
-	$("#gdsAgency").click(function (){
-		var filterChoice = "gds";
-		// var filterType = "agency";
-		filterList(filterChoice);
+	$("#digi").click(function (){
+		filterList('digital', 'medium');
+		console.log("digital")
 		
 	});
 	
-	$("#applied").click(function (){
-		var filterChoice = "gds";
-		// var filterType = "agency";
-		filterList(filterChoice);	
+	$("#print").click(function (){
+		filterList('print', 'medium');	
 	});
 
 
-	function filterList (filterChoice) {
+	// function filterList (filterChoice) {
+	// 	for (var x = 0; x < projArray.length; x++) {
+	// 		for (var y = 0; y < projArray[x].tags.length; y++) {
+	// 			if (projArray[x].tags[y] !== filterChoice) {
+	// 				console.log('.' + projArray[x].tags[y]);
+	// 				$('.' + projArray[x].title).hide()
+	// 				console.log($('.' + projArray[x].title).hide());
+	// 			} else {
+	// 				$('.' + projArray[x].title).show();
+	// 			}
+	// 		}
+	// 	}
+
+	// }
+		function filterList (filterChoice,filterType) {
+			console.log(arguments);
 		for (var x = 0; x < projArray.length; x++) {
-			for (var y = 0; y < projArray[x].tags.length; y++) {
-				if (projArray[x].tags[y] !== filterChoice) {
-					console.log('.' + projArray[x].tags[y]);
+			console.log(projArray[x], filterType);
+			for (var y = 0; y < projArray[x][filterType].length; y++) {
+				if (projArray[x][filterType][y] !== filterChoice) {
+					console.log('.' + projArray[x][filterType][y]);
 					$('.' + projArray[x].title).hide()
 					console.log($('.' + projArray[x].title).hide());
 				} else {

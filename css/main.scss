@@ -166,6 +166,28 @@ img {
 	height:auto;
 }
 
+.filterContainer {
+	display: inline-block;
+}
+
+.filterSelect {
+	display: inline-block;
+	font: {
+		font-weight: 700;
+	}
+}
+
+#clearFilter {
+	display: inline-block;
+	font: {
+		font-weight: 300;
+	}
+	:hover {
+		text-decoration: underline;
+		color: $text-highlight;
+	}
+}
+
 .project {
 	// background-color: $background-color;
 	// max-height:50vh;
